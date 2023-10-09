@@ -146,7 +146,7 @@ const SubNavHeader = (props: Props) => {
             <div className="p-4 ">
               <div className="relative after:absolute after:bottom-0 after:left-0 after:w-[2px] after:h-full after:bg-white after:content-[''] p-2 px-4 flex flex-col gap-4">
                 <div className="flex flex-col justify-center items-center text-center w-2/4">
-                  <span className="text-xs">Boohoo</span>
+                  <span className="text-xs">Bimbum</span>
                   <span className="text-lg font-semibold">Premier</span>
                 </div>
                 <div className="font-semibold">
@@ -188,7 +188,7 @@ const SubNavHeader = (props: Props) => {
           </div>
         </div>
         <div className="p-8 flex flex-col justify-start items-start w-full gap-4 text-center pb-12">
-          <div className="text-3xl font-semibold">DOWNLOAD THE BOOHOO APP</div>
+          <div className="text-3xl font-semibold">DOWNLOAD THE BIMBUM APP</div>
           <div>
             Hear about exclusive offers, get early access to collabs & quicker
             checkout

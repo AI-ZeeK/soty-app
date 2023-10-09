@@ -1,5 +1,5 @@
 "use client";
-import {cartPics} from "@/data/data";
+import {WearsType, cartPics} from "@/data/data";
 import {removeFromCart} from "@/redux/features/AppSlice";
 import {useAppDispatch, useAppSelector} from "@/redux/hooks";
 import Image from "next/image";
@@ -11,6 +11,10 @@ type Props = {};
 
 const Cart = (props: Props) => {
   const {cart} = useAppSelector((state) => state.AppReducer);
+  const sumTotal = cart.reduce(
+    (total: any, item: WearsType) => total + (Number(item?.price) || 0),
+    0
+  );
   const dispatch = useAppDispatch();
   return (
     <div className="flex flex-col gap-1">
@@ -110,13 +114,13 @@ const Cart = (props: Props) => {
               <div className="flex flex-col bg-white p-4 w-full sticky top-40">
                 <div className="flex justify-between items-center text-sm p-2 font-semibold">
                   <p>YOUR CART</p>
-                  <p>£12.00</p>
+                  <p>£{sumTotal}.00</p>
                 </div>
 
                 <div className="w-full h-[2px] bg-gray-100" />
                 <div className="flex justify-between items-center text-lg p-2 pt-4">
                   <p>SUBTOTAL (EXCLUDING DELIVERY)</p>
-                  <p>£12.00</p>
+                  <p>£{sumTotal}.00</p>
                 </div>
                 <small className="text-xs px-2">
                   *All taxes are included in product prices
@@ -138,7 +142,9 @@ const Cart = (props: Props) => {
               </div>
             </>
           ) : (
-            <p className="text-center ">YOUR CART IS CURRENTLY EMPTY</p>
+            <p className="text-center p-8 col-span-2">
+              YOUR CART IS CURRENTLY EMPTY
+            </p>
           )}
         </div>
       </div>

@@ -20,7 +20,7 @@ const Banner = (props: Props) => {
         transitionTime={2000}
       >
         <div className="hover:underline cursor-pointer">
-          DOWNLOAD THE BOOHOO APP FOR EXCLUSIVE DISCOUNTS!
+          20% OFF ALMOST EVERYTHING!*
         </div>
         <div className="hover:underline cursor-pointer">
           30% OFF MENSWEAR!* + 99p NEXT DAY DELIVERY!** USE CODE: HURRY

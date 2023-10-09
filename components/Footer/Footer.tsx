@@ -9,7 +9,7 @@ import {
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
-import {FooterType} from "@/data/data";
+import {FooterType, countries} from "@/data/data";
 import {useAppDispatch, useAppSelector} from "@/redux/hooks";
 import {setFooterNav} from "@/redux/features/AppSlice";
 import Link from "next/link";
@@ -103,7 +103,7 @@ const Footer = (props: Props) => {
             <small className="text-xs">
               *Extra 10% discount sent via email to new subscribers only. By
               subscribing, you agree to receive marketing communications from
-              boohoo by email. You can unsubscribe at any point.
+              bimbum by email. You can unsubscribe at any point.
             </small>
             <div className="flex gap-2 justify-start items-center">
               <input
@@ -122,7 +122,7 @@ const Footer = (props: Props) => {
               SUBSCRIBE
             </button>
           </div>
-          <div className="bg-[#aeaeae] p-8 flex flex-col gap-8 justify-center items-center text-sm">
+          {/* <div className="bg-[#aeaeae] p-8 flex flex-col gap-8 justify-center items-center text-sm">
             <p>Download The Bohoo App</p>
             <strong>
               Hear about exclusive offers, get early access to collabs & quicker
@@ -158,7 +158,7 @@ const Footer = (props: Props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="flex gap-8 p-4 justify-center items-center">
             <div className="cursor-pointer">
               <BsInstagram fontSize={32} />
@@ -183,13 +183,22 @@ const Footer = (props: Props) => {
             <label htmlFor="" className="font-semibold text-lg">
               COUNTRY
             </label>
-            <select name="" id="" className="p-2 border w-full text-sm">
-              <option value="UK">COUSIJSKNSJ</option>
+
+            <select required className="p-2 border w-full text-sm">
+              <option value="" className="text-gray-700">
+                Select Country
+              </option>
+
+              {countries.map((country, i) => (
+                <option value="" key={i}>
+                  {country.name}{" "}
+                </option>
+              ))}
             </select>
           </div>
         </div>
         <div className="flex flex-col gap-4 p-4 justify-center items-center text-sm lg:col-span-4 lg:justify-between lg:flex-row">
-          <p>COPYRIGHT © 2023 BOOHOO</p>
+          <p>COPYRIGHT © 2023 BIMBUM</p>
           <div className="flex gap-8 ">
             <Link href={"#"} className="underline">
               Terms & Conditions
