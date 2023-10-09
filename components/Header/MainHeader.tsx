@@ -12,7 +12,7 @@ type Props = {};
 
 const MainHeader = (props: Props) => {
   const pathName = usePathname();
-  const [isMen, setIsMen] = useState("MEN");
+  const [isMen, setIsMen] = useState("/MEN");
   const {cart} = useAppSelector((state) => state.AppReducer);
 
   const dispatch = useAppDispatch();
