@@ -12,7 +12,7 @@ type Props = {};
 
 const SubNavHeader = (props: Props) => {
   const pathName = usePathname();
-  const [isMen, setIsMen] = useState("MEN");
+  const [isMen, setIsMen] = useState("/MEN");
   const {isSubNavOpen} = useAppSelector((state) => state.AppReducer);
 
   useEffect(() => {
